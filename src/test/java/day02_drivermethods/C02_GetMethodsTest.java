@@ -9,7 +9,9 @@ public class C02_GetMethodsTest {
     public static void main(String[] args) {
 
         // Go to Techproeducation page https://www.techproeducation.com/
-        // Print the page title (address url)
+        // Print the page title
+        // Test if the page title contains "IT"
+        // Print the page address (url)
         // Test that the page url contains "education"
         // Print the page handle value
         // Test wheter the word "IT Programs" appears in the page HTML codes
@@ -17,25 +19,25 @@ public class C02_GetMethodsTest {
 
 
         WebDriverManager.chromedriver().setup(); // Altyapıyı kurduk.
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = new ChromeDriver(); // Bos bir sayfa actik
 
         driver.get("https://www.techproeducation.com/");
 
         String actualTitle = driver.getTitle();
         System.out.println("actualTitle = " + actualTitle);
 
-        if (actualTitle.contains("IT")){
+        if (actualTitle.contains("IT")) {
             System.out.println("Test Passed");
-        }else {
+        } else {
             System.out.println("Test Failed");
         }
 
         String actualUrl = driver.getCurrentUrl();
         System.out.println("actualUrl = " + actualUrl);
 
-        if (actualUrl.contains("education")){
+        if (actualUrl.contains("education")) {
             System.out.println("Test Passed");
-        }else {
+        } else {
             System.out.println("Test Failed");
         }
 
@@ -44,9 +46,9 @@ public class C02_GetMethodsTest {
 
         String tehchproPageSource = driver.getPageSource();
 
-        if (tehchproPageSource.contains("IT Programs")){
+        if (tehchproPageSource.contains("IT Programs")) {
             System.out.println("Test Passed");
-        }else {
+        } else {
             System.out.println("Test Failed");
         }
 

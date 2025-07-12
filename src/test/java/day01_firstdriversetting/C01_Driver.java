@@ -13,7 +13,7 @@ public class C01_Driver {
         ChromeBrowser'in dogru bir sekilde baslatilmasini saglar.
          */
 
-        System.setProperty("webdriver.chrome.driver","drivers/chromedriver.exe" );
+        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
 
         WebDriver driver = new ChromeDriver(); // Bos bir browser acat. Browser'i actik. Sonra gitmek istediğimiz url yazılır.
 
