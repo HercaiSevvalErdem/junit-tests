@@ -11,7 +11,7 @@ public class C01_ImplicitlyWait {
 
     public static void main(String[] args) {
 
-        WebDriverManager.chromedriver().setup();
+       // WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize(); // Sayfayi buyuttuk
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15)); // Sayfadaki tum webelementlerin yuklenmessini max 15 saniye icin bekle
@@ -60,7 +60,11 @@ public class C01_ImplicitlyWait {
         driver.navigate().back();
 
         // Test that you are back
-
+        if (driver.getTitle().equals("TechPro Education IT Programs")){
+            System.out.println("Test Passed");
+        }else {
+            System.out.println("Test Failed");
+        }
 
         // Close the page
         driver.close();
